@@ -1,0 +1,53 @@
+FUNCTION main :
+a := #0
+b := #3
+READ n
+IF n > #0 GOTO label1
+GOTO label2
+LABEL label1 :
+WRITE #1
+GOTO label3
+LABEL label2 :
+IF n < #0 GOTO label4
+GOTO label5
+LABEL label4 :
+WRITE #-1
+GOTO label6
+LABEL label5 :
+WRITE #0
+LABEL label6 :
+LABEL label3 :
+IF a > #0 GOTO label9
+GOTO label8
+LABEL label9 :
+IF b <= #0 GOTO label7
+GOTO label8
+LABEL label7 :
+WRITE #1
+GOTO label10
+LABEL label8 :
+WRITE #0
+LABEL label10 :
+IF a < b GOTO label11
+GOTO label13
+LABEL label13 :
+IF b >= n GOTO label11
+GOTO label12
+LABEL label11 :
+WRITE #1
+GOTO label14
+LABEL label12 :
+WRITE #0
+LABEL label14 :
+IF a == b GOTO label15
+GOTO label17
+LABEL label17 :
+IF b != n GOTO label15
+GOTO label16
+LABEL label15 :
+WRITE #1
+GOTO label18
+LABEL label16 :
+WRITE #0
+LABEL label18 :
+RETURN #0

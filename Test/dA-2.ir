@@ -1,0 +1,32 @@
+FUNCTION main :
+READ a
+READ b
+READ c
+IF a > b GOTO label1
+GOTO label2
+LABEL label1 :
+a := a + b
+b := a - b
+a := a - b
+LABEL label2 :
+IF c < a GOTO label3
+GOTO label4
+LABEL label3 :
+tmp := b
+b := a
+a := c
+c := tmp
+GOTO label5
+LABEL label4 :
+IF c < b GOTO label6
+GOTO label7
+LABEL label6 :
+b := b + c
+c := b - c
+b := b - c
+LABEL label7 :
+LABEL label5 :
+WRITE a
+WRITE b
+WRITE c
+RETURN #0

@@ -1,0 +1,14 @@
+/*
+* @Principles and Techniques of Compilers
+*/
+
+// Principles and Techniques of Compilers //
+
+int /*~~~*/ main() ////////________\\\\\\\\/*\
+{
+	int a, b;
+	/*
+	Principles and Techniques of Compilers
+	*/
+	int c = /* a + b */ a * b /*; // a / b /
+}//Principles and Techniques of Compilers

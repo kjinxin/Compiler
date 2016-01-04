@@ -1,0 +1,29 @@
+FUNCTION main :
+DEC a 400
+i := #10
+LABEL label1 :
+IF i < #10 GOTO label2
+GOTO label3
+LABEL label2 :
+t5 := &a
+t7 := i * #4
+t4 := t5 + t7
+*t4 := i
+GOTO label1
+LABEL label3 :
+i := #10
+t12 := &a
+t13 := i / #10
+t16 := t13 * #4
+t11 := t12 + t16
+t20 := &a
+t21 := i / #10
+t24 := t21 * #4
+t18 := t20 + t24
+t17 := *t18 + #3
+*t11 := t17
+t26 := &a
+t27 := i / #10
+t30 := t27 * #4
+t25 := t26 + t30
+WRITE *t25

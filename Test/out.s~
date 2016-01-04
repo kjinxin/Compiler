@@ -1,0 +1,80 @@
+.data
+_prompt: .asciiz "Enter an integer:"
+_ret: .asciiz "\n"
+.globl main
+.text
+read:
+li $v0, 4
+la $a0, _prompt
+syscall
+li $v0, 5
+syscall
+jr $ra
+
+write:
+li $v0, 1
+syscall
+li $v0, 4
+la $a0, _ret
+syscall
+move $v0, $0
+jr $ra
+main:
+li $t5, 0
+li $t4, 1
+li $t3, 0
+addi $sp, $sp, 
+-
+4
+28
+sw $ra, 0($sp)
+29
+jal read
+30
+lw $ra, 0($sp)
+31
+addi $sp, $sp, 4
+32
+move $t1, $v0
+33
+move $t2, $t1
+34
+label1:
+35
+blt $t3, $t2, label2
+36
+j label3
+37
+label2:
+38
+add $t1, $t5, $t4
+39
+move $a0, $t4
+40
+addi $sp, $sp, 
+-
+4
+41
+sw $ra, 0($sp)
+42
+jal write
+43
+lw $ra, 0($sp)
+44
+addi $sp, $sp, 4
+45
+move $t5, $t4
+46
+move $t4, $t1
+47
+addi $t1, $t3, 1
+48
+move $t3, $t1
+49
+j label1
+50
+label3:
+51
+move $v0, $0
+52
+jr $ra

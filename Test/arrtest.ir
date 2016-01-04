@@ -1,0 +1,9 @@
+FUNCTION main :
+a := #0
+b := #1
+DEC c 400
+t4 := &c
+t3 := t4 + #360
+t7 := a + b
+*t3 := t7
+RETURN #0

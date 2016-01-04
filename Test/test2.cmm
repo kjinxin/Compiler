@@ -1,0 +1,9 @@
+struct score3 {
+    int algorithm3;
+};
+
+int main()
+{
+    int a[10], b[10];
+    int score3;
+}

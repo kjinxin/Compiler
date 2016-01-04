@@ -1,0 +1,11 @@
+int main()
+{
+	int a, b;
+	int c;
+	b = 20;
+	c = 0;
+	a = 3;
+	write(b / a);
+	write(a / b);
+	return 0;
+}

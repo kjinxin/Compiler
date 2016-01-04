@@ -1,0 +1,47 @@
+FUNCTION compare :
+PARAM s1
+PARAM s2
+t2 := s1 + #0
+t3 := s1 + #4
+a := *t2 + *t3
+t7 := s2 + #0
+t8 := s2 + #4
+b := *t7 + *t8
+IF a > b GOTO label1
+GOTO label2
+LABEL label1 :
+d := #1
+GOTO label3
+LABEL label2 :
+IF a == b GOTO label4
+GOTO label5
+LABEL label4 :
+d := #0
+GOTO label6
+LABEL label5 :
+d := #-1
+LABEL label6 :
+LABEL label3 :
+RETURN d
+FUNCTION main :
+DEC ss1 8
+DEC ss2 8
+t24 := &ss1
+t23 := t24 + #0
+*t23 := #95
+t27 := &ss1
+t26 := t27 + #4
+*t26 := #96
+t30 := &ss2
+t29 := t30 + #0
+*t29 := #98
+t33 := &ss2
+t32 := t33 + #4
+*t32 := #90
+t36 := &ss1
+t37 := &ss2
+ARG t37
+ARG t36
+t35 := CALL compare
+WRITE t35
+RETURN #0

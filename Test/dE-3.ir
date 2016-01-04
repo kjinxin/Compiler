@@ -1,0 +1,125 @@
+FUNCTION compare :
+PARAM x
+PARAM y
+i := #0
+LABEL label1 :
+IF i < #10 GOTO label2
+GOTO label3
+LABEL label2 :
+t6 := x + #4
+t9 := i * #4
+t4 := t6 + t9
+t10 := y + #4
+t13 := i * #4
+t5 := t10 + t13
+IF *t4 > *t5 GOTO label4
+GOTO label5
+LABEL label4 :
+RETURN #1
+GOTO label6
+LABEL label5 :
+t17 := x + #4
+t20 := i * #4
+t15 := t17 + t20
+t21 := y + #4
+t24 := i * #4
+t16 := t21 + t24
+IF *t15 < *t16 GOTO label7
+GOTO label8
+LABEL label7 :
+RETURN #-1
+GOTO label9
+LABEL label8 :
+i := i + #1
+LABEL label9 :
+LABEL label6 :
+GOTO label1
+LABEL label3 :
+t33 := x + #44
+t31 := t33 + #4
+t35 := y + #44
+t32 := t35 + #0
+IF *t31 > *t32 GOTO label10
+GOTO label11
+LABEL label10 :
+RETURN #1
+GOTO label12
+LABEL label11 :
+t40 := x + #44
+t38 := t40 + #0
+t42 := y + #44
+t39 := t42 + #0
+IF *t38 < *t39 GOTO label13
+GOTO label14
+LABEL label13 :
+RETURN #-1
+LABEL label14 :
+LABEL label12 :
+t48 := x + #44
+t46 := t48 + #4
+t50 := y + #44
+t47 := t50 + #4
+IF *t46 > *t47 GOTO label15
+GOTO label16
+LABEL label15 :
+RETURN #1
+GOTO label17
+LABEL label16 :
+t55 := x + #44
+t53 := t55 + #4
+t57 := y + #44
+t54 := t57 + #4
+IF *t53 < *t54 GOTO label18
+GOTO label19
+LABEL label18 :
+RETURN #-1
+LABEL label19 :
+LABEL label17 :
+RETURN #0
+FUNCTION main :
+DEC a 52
+DEC b 52
+ii := #0
+t64 := &a
+t63 := t64 + #0
+*t63 := #1
+LABEL label20 :
+IF ii < #10 GOTO label21
+GOTO label22
+LABEL label21 :
+t70 := &a
+t69 := t70 + #4
+t72 := ii * #4
+t68 := t69 + t72
+*t68 := ii
+t76 := &b
+t75 := t76 + #4
+t78 := ii * #4
+t74 := t75 + t78
+*t74 := ii
+ii := ii + #1
+GOTO label20
+LABEL label22 :
+t86 := &a
+t85 := t86 + #44
+t84 := t85 + #0
+*t84 := #10
+t90 := &b
+t89 := t90 + #44
+t88 := t89 + #0
+*t88 := #10
+t94 := &a
+t93 := t94 + #44
+t92 := t93 + #4
+*t92 := #11
+t98 := &a
+t97 := t98 + #44
+t96 := t97 + #4
+*t96 := #10
+t101 := &a
+t102 := &b
+ARG t102
+ARG t101
+t100 := CALL compare
+WRITE t100
+RETURN #0

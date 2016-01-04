@@ -1,0 +1,33 @@
+FUNCTION main :
+n := #10
+LABEL label1 :
+IF n < #100 GOTO label2
+GOTO label3
+LABEL label2 :
+p := #1
+s := #0
+m := n
+LABEL label4 :
+IF m != #0 GOTO label5
+GOTO label6
+LABEL label5 :
+t18 := m / #10
+t17 := t18 * #10
+t15 := m - t17
+p := p * t15
+t28 := m / #10
+t27 := t28 * #10
+t25 := m - t27
+s := s + t25
+m := m / #10
+GOTO label4
+LABEL label6 :
+IF s > p GOTO label7
+GOTO label8
+LABEL label7 :
+WRITE n
+LABEL label8 :
+n := n + #1
+GOTO label1
+LABEL label3 :
+RETURN #0

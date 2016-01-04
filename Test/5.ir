@@ -1,0 +1,32 @@
+FUNCTION main :
+i := #-1
+j := #1
+m := j
+n := i + j
+m := i
+IF i > #0 GOTO label4
+GOTO label3
+LABEL label4 :
+IF j <= #0 GOTO label1
+GOTO label3
+LABEL label3 :
+IF m > #0 GOTO label5
+GOTO label2
+LABEL label5 :
+IF n != #0 GOTO label1
+GOTO label2
+LABEL label1 :
+WRITE #1
+GOTO label6
+LABEL label2 :
+WRITE #0
+LABEL label6 :
+IF m > #0 GOTO label7
+GOTO label8
+LABEL label7 :
+WRITE #2
+GOTO label9
+LABEL label8 :
+WRITE #3
+LABEL label9 :
+RETURN #0

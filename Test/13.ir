@@ -1,0 +1,21 @@
+FUNCTION main :
+i := #10
+DEC a 40
+i := #20
+t5 := &a
+t4 := t5 + #4
+*t4 := #0
+i := #30
+j := #1
+LABEL label1 :
+IF i > #0 GOTO label2
+GOTO label3
+LABEL label2 :
+j := i
+WRITE i
+i := i - #1
+j := i
+WRITE j
+GOTO label1
+LABEL label3 :
+RETURN #0

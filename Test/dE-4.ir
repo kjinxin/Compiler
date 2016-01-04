@@ -1,0 +1,44 @@
+FUNCTION main :
+DEC a 24
+i := #0
+LABEL label1 :
+IF i < #3 GOTO label2
+GOTO label3
+LABEL label2 :
+t6 := &a
+t8 := i * #8
+t5 := t6 + t8
+t4 := t5 + #0
+t11 := i - #2
+*t4 := t11
+t16 := &a
+t18 := i * #8
+t15 := t16 + t18
+t14 := t15 + #4
+t22 := i * i
+t21 := t22 + #2
+*t14 := t21
+i := i + #1
+GOTO label1
+LABEL label3 :
+sum := #0
+i := #0
+LABEL label4 :
+IF i < #3 GOTO label5
+GOTO label6
+LABEL label5 :
+t43 := &a
+t45 := i * #8
+t42 := t43 + t45
+t41 := t42 + #4
+t38 := sum + *t41
+t49 := &a
+t51 := i * #8
+t48 := t49 + t51
+t39 := t48 + #0
+sum := t38 - *t39
+i := i + #1
+GOTO label4
+LABEL label6 :
+WRITE sum
+RETURN #0

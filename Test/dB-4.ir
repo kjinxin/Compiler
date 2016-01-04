@@ -1,0 +1,94 @@
+FUNCTION main :
+DEC arr 40
+mi := #0
+LABEL label1 :
+IF mi < #10 GOTO label2
+GOTO label3
+LABEL label2 :
+t6 := &arr
+t8 := mi * #4
+t5 := t6 + t8
+t10 := #10 - mi
+t9 := t10 * #2
+*t5 := t9
+mi := mi + #1
+GOTO label1
+LABEL label3 :
+t19 := &arr
+t18 := t19 + #8
+*t18 := #5
+t24 := &arr
+t23 := t24 + #28
+*t23 := #16
+t29 := &arr
+t28 := t29 + #36
+*t28 := #15
+i := #1
+LABEL label4 :
+IF i < #10 GOTO label5
+GOTO label6
+LABEL label5 :
+t39 := &arr
+t41 := i * #4
+t38 := t39 + t41
+temp := *t38
+j := i - #1
+LABEL label7 :
+t46 := #0
+IF j >= #0 GOTO label11
+GOTO label12
+LABEL label11 :
+t46 := #1
+LABEL label12 :
+IF t46 != #0 GOTO label10
+GOTO label9
+LABEL label10 :
+t49 := #0
+t52 := &arr
+t54 := j * #4
+t50 := t52 + t54
+IF *t50 > temp GOTO label13
+GOTO label14
+LABEL label13 :
+t49 := #1
+LABEL label14 :
+IF t49 != #0 GOTO label8
+GOTO label9
+LABEL label8 :
+t56 := &arr
+t57 := j + #1
+t60 := t57 * #4
+t55 := t56 + t60
+t62 := &arr
+t64 := j * #4
+t61 := t62 + t64
+*t55 := *t61
+j := j - #1
+GOTO label7
+LABEL label9 :
+t70 := i - #1
+IF j != t70 GOTO label15
+GOTO label16
+LABEL label15 :
+t74 := &arr
+t75 := j + #1
+t78 := t75 * #4
+t73 := t74 + t78
+*t73 := temp
+LABEL label16 :
+i := i + #1
+GOTO label4
+LABEL label6 :
+i := #0
+LABEL label17 :
+IF i < #10 GOTO label18
+GOTO label19
+LABEL label18 :
+t89 := &arr
+t91 := i * #4
+t88 := t89 + t91
+WRITE *t88
+i := i + #1
+GOTO label17
+LABEL label19 :
+RETURN #0

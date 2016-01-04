@@ -1,0 +1,228 @@
+FUNCTION longest_substring_palindrome :
+PARAM arr
+n := #10
+DEC p 168
+i := #0
+LABEL label1 :
+IF i < n GOTO label2
+GOTO label3
+LABEL label2 :
+t8 := &p
+t7 := t8 + #0
+t11 := i * #2
+t14 := t11 * #4
+t6 := t7 + t14
+*t6 := #0
+t18 := &p
+t17 := t18 + #0
+t22 := i * #2
+t21 := t22 + #1
+t26 := t21 * #4
+t16 := t17 + t26
+t30 := i * #4
+t27 := arr + t30
+*t16 := *t27
+i := i + #1
+GOTO label1
+LABEL label3 :
+t37 := &p
+t36 := t37 + #0
+t40 := #2 * n
+t43 := t40 * #4
+t35 := t36 + t43
+*t35 := #0
+i := #0
+LABEL label4 :
+t49 := #2 * n
+t48 := t49 + #1
+IF i < t48 GOTO label5
+GOTO label6
+LABEL label5 :
+t55 := &p
+t54 := t55 + #84
+t59 := i * #4
+t53 := t54 + t59
+*t53 := #0
+i := i + #1
+GOTO label4
+LABEL label6 :
+mx := #0
+id := #0
+i := #0
+LABEL label7 :
+t73 := #2 * n
+t72 := t73 + #1
+IF i < t72 GOTO label8
+GOTO label9
+LABEL label8 :
+t79 := #2 * id
+t77 := t79 - i
+IF t77 >= #0 GOTO label12
+GOTO label11
+LABEL label12 :
+t83 := mx - i
+t88 := &p
+t87 := t88 + #84
+t92 := #2 * id
+t91 := t92 - i
+t96 := t91 * #4
+t84 := t87 + t96
+IF t83 > *t84 GOTO label10
+GOTO label11
+LABEL label10 :
+t99 := &p
+t98 := t99 + #84
+t103 := i * #4
+t97 := t98 + t103
+t106 := &p
+t105 := t106 + #84
+t110 := #2 * id
+t109 := t110 - i
+t114 := t109 * #4
+t104 := t105 + t114
+*t97 := *t104
+GOTO label13
+LABEL label11 :
+t117 := &p
+t116 := t117 + #84
+t121 := i * #4
+t115 := t116 + t121
+t122 := mx - i
+*t115 := t122
+LABEL label13 :
+LABEL label14 :
+t132 := &p
+t131 := t132 + #84
+t136 := i * #4
+t130 := t131 + t136
+t127 := i + *t130
+t125 := t127 + #1
+t137 := #2 * n
+t126 := t137 + #1
+IF t125 < t126 GOTO label18
+GOTO label16
+LABEL label18 :
+t148 := &p
+t147 := t148 + #84
+t152 := i * #4
+t146 := t147 + t152
+t143 := i - *t146
+t141 := t143 - #1
+IF t141 >= #0 GOTO label17
+GOTO label16
+LABEL label17 :
+t156 := &p
+t155 := t156 + #0
+t165 := &p
+t164 := t165 + #84
+t169 := i * #4
+t163 := t164 + t169
+t160 := i + *t163
+t159 := t160 + #1
+t170 := t159 * #4
+t153 := t155 + t170
+t172 := &p
+t171 := t172 + #0
+t181 := &p
+t180 := t181 + #84
+t185 := i * #4
+t179 := t180 + t185
+t176 := i - *t179
+t175 := t176 - #1
+t186 := t175 * #4
+t154 := t171 + t186
+IF *t153 == *t154 GOTO label15
+GOTO label16
+LABEL label15 :
+t189 := &p
+t188 := t189 + #84
+t193 := i * #4
+t187 := t188 + t193
+t198 := &p
+t197 := t198 + #84
+t202 := i * #4
+t195 := t197 + t202
+t194 := *t195 + #1
+*t187 := t194
+GOTO label14
+LABEL label16 :
+t208 := &p
+t207 := t208 + #84
+t212 := i * #4
+t206 := t207 + t212
+t203 := i + *t206
+IF t203 > mx GOTO label19
+GOTO label20
+LABEL label19 :
+t218 := &p
+t217 := t218 + #84
+t222 := i * #4
+t216 := t217 + t222
+mx := i + *t216
+id := i
+LABEL label20 :
+i := i + #1
+GOTO label7
+LABEL label9 :
+res := #0
+i := #0
+LABEL label21 :
+t235 := #2 * n
+t234 := t235 + #1
+IF i < t234 GOTO label22
+GOTO label23
+LABEL label22 :
+t242 := &p
+t241 := t242 + #84
+t246 := i * #4
+t239 := t241 + t246
+IF *t239 > res GOTO label24
+GOTO label25
+LABEL label24 :
+t250 := &p
+t249 := t250 + #84
+t254 := i * #4
+t248 := t249 + t254
+res := *t248
+LABEL label25 :
+i := i + #1
+GOTO label21
+LABEL label23 :
+RETURN res
+FUNCTION main :
+DEC num 40
+t261 := &num
+t260 := t261 + #0
+*t260 := #1
+t266 := &num
+t265 := t266 + #4
+*t265 := #2
+t271 := &num
+t270 := t271 + #8
+*t270 := #1
+t276 := &num
+t275 := t276 + #12
+*t275 := #2
+t281 := &num
+t280 := t281 + #16
+*t280 := #3
+t286 := &num
+t285 := t286 + #20
+*t285 := #2
+t291 := &num
+t290 := t291 + #24
+*t290 := #1
+t296 := &num
+t295 := t296 + #28
+*t295 := #1
+t301 := &num
+t300 := t301 + #32
+*t300 := #2
+t306 := &num
+t305 := t306 + #36
+*t305 := #1
+t311 := &num
+ARG t311
+t310 := CALL longest_substring_palindrome
+WRITE t310
+RETURN #0

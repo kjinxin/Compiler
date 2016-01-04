@@ -1,0 +1,11 @@
+FUNCTION main :
+i := #20
+LABEL label1 :
+IF i > #5 GOTO label2
+GOTO label3
+LABEL label2 :
+WRITE i
+i := i - #1
+GOTO label1
+LABEL label3 :
+RETURN #0

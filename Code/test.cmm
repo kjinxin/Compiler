@@ -1,0 +1,13 @@
+int main()
+{
+	float a[10][2];
+	int i;
+	int j = 0x86
+	int k = 077;
+	int tt = 8
+	a[5,3] = 1.5;
+	j = 089;
+	if (a[1][2] == 0) i = 1  else i = 0;
+	/* hello */
+	// you are foolish!
+}

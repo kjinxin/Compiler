@@ -1,0 +1,43 @@
+FUNCTION main :
+READ i
+READ j
+READ k
+IF i <= #0 GOTO label1
+GOTO label4
+LABEL label4 :
+IF j <= #0 GOTO label1
+GOTO label3
+LABEL label3 :
+IF k <= #0 GOTO label1
+GOTO label2
+LABEL label1 :
+WRITE #-1
+GOTO label5
+LABEL label2 :
+t15 := i + j
+IF t15 <= k GOTO label6
+GOTO label7
+LABEL label6 :
+WRITE #-1
+GOTO label8
+LABEL label7 :
+t21 := i + k
+IF t21 <= j GOTO label9
+GOTO label10
+LABEL label9 :
+WRITE #-1
+GOTO label11
+LABEL label10 :
+t27 := j + k
+IF t27 <= i GOTO label12
+GOTO label13
+LABEL label12 :
+WRITE #-1
+GOTO label14
+LABEL label13 :
+WRITE #1
+LABEL label14 :
+LABEL label11 :
+LABEL label8 :
+LABEL label5 :
+RETURN #0

@@ -1,0 +1,50 @@
+FUNCTION main :
+READ year
+IF year <= #0 GOTO label1
+GOTO label2
+LABEL label1 :
+WRITE #-1
+RETURN #0
+GOTO label3
+LABEL label2 :
+t10 := year / #4
+t9 := t10 * #4
+remain4 := year - t9
+t17 := year / #100
+t16 := t17 * #100
+remain100 := year - t16
+t24 := year / #400
+t23 := t24 * #400
+remain400 := year - t23
+IF remain4 != #0 GOTO label4
+GOTO label5
+LABEL label4 :
+leap := #0
+GOTO label6
+LABEL label5 :
+IF remain400 == #0 GOTO label7
+GOTO label8
+LABEL label7 :
+leap := #1
+GOTO label9
+LABEL label8 :
+IF remain100 == #0 GOTO label10
+GOTO label11
+LABEL label10 :
+leap := #0
+GOTO label12
+LABEL label11 :
+leap := #1
+LABEL label12 :
+LABEL label9 :
+LABEL label6 :
+LABEL label3 :
+IF leap == #0 GOTO label13
+GOTO label14
+LABEL label13 :
+WRITE #365
+GOTO label15
+LABEL label14 :
+WRITE #366
+LABEL label15 :
+RETURN #0

@@ -1,0 +1,144 @@
+FUNCTION main :
+a := #3
+b := #4
+i := #0
+sum := #0
+DEC array 600
+d := a * a
+e := b * b
+IF #-1 != #0 GOTO label1
+GOTO label3
+LABEL label3 :
+t15 := d + e
+IF t15 > #0 GOTO label1
+GOTO label2
+LABEL label1 :
+t25 := a * a
+t26 := b * b
+t23 := t25 - t26
+t24 := d * e
+t21 := t23 + t24
+t22 := a - #8
+i := t21 / t22
+LABEL label2 :
+t43 := a * #3
+t40 := #7 - t43
+t41 := #4 * b
+t38 := t40 - t41
+t39 := d * e
+t37 := t38 + t39
+c := #0 - t37
+i := c - c
+LABEL label4 :
+IF i < #150 GOTO label5
+GOTO label6
+LABEL label5 :
+t65 := &array
+t67 := i * #4
+t64 := t65 + t67
+*t64 := #1
+i := i + #1
+GOTO label4
+LABEL label6 :
+t81 := &array
+t79 := t81 + #0
+t77 := *t79 + d
+t75 := t77 - #1
+i := t75 - d
+LABEL label7 :
+t92 := b * b
+t89 := c - t92
+t90 := a * a
+t88 := t89 + t90
+t86 := #1 * t88
+t85 := #0 - t86
+IF i < t85 GOTO label8
+GOTO label9
+LABEL label8 :
+t98 := a + #4
+k := t98 - b
+j := d
+l := k - #1
+LABEL label10 :
+t110 := a + b
+t108 := t110 - #10
+t107 := t108 + #3
+IF j > t107 GOTO label11
+GOTO label12
+LABEL label11 :
+f := #0
+t116 := &array
+t117 := i / #10
+t120 := t117 * #4
+t115 := t116 + t120
+t124 := &array
+t125 := i / #10
+t128 := t125 * #4
+t122 := t124 + t128
+t123 := j * #3
+t121 := *t122 + t123
+*t115 := t121
+IF l == #2 GOTO label13
+GOTO label14
+LABEL label13 :
+t134 := &array
+t135 := i / #10
+t138 := t135 * #4
+t133 := t134 + t138
+t142 := &array
+t143 := i / #10
+t146 := t143 * #4
+t140 := t142 + t146
+t148 := j * #3
+t141 := #2 + t148
+t139 := *t140 - t141
+*t133 := t139
+LABEL label14 :
+IF i > #100 GOTO label15
+GOTO label16
+LABEL label15 :
+t155 := j / #2
+f := t155 - #1
+GOTO label17
+LABEL label16 :
+t160 := &array
+t161 := i / #10
+t164 := t161 * #4
+t159 := t160 + t164
+t168 := &array
+t169 := i / #10
+t172 := t169 * #4
+t166 := t168 + t172
+t165 := *t166 + j
+*t159 := t165
+LABEL label17 :
+f := f - #1
+t179 := j / #2
+j := t179 - #1
+GOTO label10
+LABEL label12 :
+t183 := b + sum
+IF t183 < d GOTO label18
+GOTO label20
+LABEL label20 :
+IF e != #0 GOTO label18
+GOTO label19
+LABEL label18 :
+i := i + #1
+LABEL label19 :
+GOTO label7
+LABEL label9 :
+i := #0
+LABEL label21 :
+IF i < #150 GOTO label22
+GOTO label23
+LABEL label22 :
+t200 := &array
+t202 := i * #4
+t199 := t200 + t202
+sum := sum + *t199
+i := i + #1
+GOTO label21
+LABEL label23 :
+WRITE sum
+RETURN #0

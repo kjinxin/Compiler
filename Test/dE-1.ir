@@ -1,0 +1,22 @@
+FUNCTION sum :
+PARAM sx
+PARAM sy
+t1 := sx + sy
+RETURN t1
+FUNCTION main :
+DEC p 8
+t5 := &p
+t4 := t5 + #0
+*t4 := #2
+t8 := &p
+t7 := t8 + #4
+*t7 := #3
+t12 := &p
+t11 := t12 + #0
+t14 := &p
+t13 := t14 + #4
+ARG *t13
+ARG *t11
+t10 := CALL sum
+WRITE t10
+RETURN #0

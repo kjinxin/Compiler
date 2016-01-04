@@ -1,0 +1,77 @@
+FUNCTION main :
+a := #1
+b := #3
+c := #13
+t23 := a + b
+d := t23 - c
+t28 := a + b
+t29 := c * #2
+e := t28 + t29
+t35 := a + b
+f := t35 + c
+g1 := #42
+i := #0
+t49 := a + b
+t47 := t49 + c
+t45 := t47 - d
+t43 := t45 - e
+f := t43 + f
+LABEL label1 :
+t53 := b - a
+IF t53 < f GOTO label2
+GOTO label3
+LABEL label2 :
+t66 := i * #4
+t63 := g1 + t66
+t61 := t63 + #3
+t59 := t61 + #4
+g1 := t59 + #5
+t75 := f - b
+t76 := a * #2
+t73 := t75 + t76
+t74 := c * d
+t71 := t73 + t74
+g := t71 - f
+t85 := i + #1
+i := t85 + #0
+t91 := i + #3
+i := t91 + #1
+t97 := i - #2
+i := t97 - #2
+t105 := i / #3
+t104 := t105 * #3
+t101 := i - t104
+t115 := a - a
+t113 := t115 + b
+t111 := t113 - b
+t109 := t111 + c
+t102 := t109 - c
+IF t101 == t102 GOTO label4
+GOTO label5
+LABEL label4 :
+t121 := f + #1
+f := t121 + #1
+LABEL label5 :
+t127 := f - #2
+f := t127 + #1
+GOTO label1
+LABEL label3 :
+t133 := g1 - #2
+h := t133 + #3
+WRITE h
+i := g1
+LABEL label6 :
+IF g1 >= #1222 GOTO label7
+GOTO label8
+LABEL label7 :
+i := g1 + #1024
+g1 := g1 - #1
+i := g1
+GOTO label6
+LABEL label8 :
+WRITE g1
+a := a + b
+b := a + b
+c := a + b
+WRITE c
+RETURN #0

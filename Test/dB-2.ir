@@ -1,0 +1,36 @@
+FUNCTION main :
+i := #2
+READ n
+LABEL label1 :
+IF i < n GOTO label2
+GOTO label3
+LABEL label2 :
+j := #2
+flag := #1
+LABEL label4 :
+IF j < i GOTO label7
+GOTO label6
+LABEL label7 :
+IF flag == #1 GOTO label5
+GOTO label6
+LABEL label5 :
+t17 := i / j
+t15 := t17 * j
+t13 := t15 - i
+IF t13 == #0 GOTO label8
+GOTO label9
+LABEL label8 :
+flag := #0
+LABEL label9 :
+j := j + #1
+GOTO label4
+LABEL label6 :
+IF flag == #1 GOTO label10
+GOTO label11
+LABEL label10 :
+WRITE i
+LABEL label11 :
+i := i + #1
+GOTO label1
+LABEL label3 :
+RETURN #0
